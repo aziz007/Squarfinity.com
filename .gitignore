@@ -1,0 +1,14 @@
+# dependencies and build output
+node_modules/
+dist/
+out-tsc/
+.angular/
+
+# runtime data (lead submissions)
+data/
+
+# editors and OS
+.vscode/
+.idea/
+.DS_Store
+*.log
