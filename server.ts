@@ -36,7 +36,7 @@ const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 app.get('/api/health', (_req, res) => res.json({ ok: true }));
 
-app.post('/api/leads', async (req: Request, res: Response) => {
+app.post(['/api/leads', '/api/leads.php'], async (req: Request, res: Response) => {
   const { type, data } = req.body ?? {};
 
   if (typeof type !== 'string' || !LEAD_TYPES.has(type) || !data || typeof data !== 'object') {

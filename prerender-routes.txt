@@ -1,0 +1,10 @@
+/services/software
+/services/marketing
+/services/ecommerce
+/services/ai
+/thanks/consultation
+/thanks/audit
+/thanks/quote
+/thanks/guide
+/thanks/contact
+/thanks/ad-landing

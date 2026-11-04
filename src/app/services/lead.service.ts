@@ -7,6 +7,6 @@ export class LeadService {
   private http = inject(HttpClient);
 
   submit(type: LeadType, data: Record<string, unknown>) {
-    return this.http.post<{ ok: boolean }>('/api/leads', { type, data });
+    return this.http.post<{ ok: boolean }>('/api/leads.php', { type, data });
   }
 }
