@@ -5,7 +5,7 @@ out-tsc/
 .angular/
 
 # runtime data (lead submissions)
-data/
+/data/
 
 # editors and OS
 .vscode/
