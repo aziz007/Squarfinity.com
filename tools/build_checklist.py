@@ -1,6 +1,6 @@
 """Builds src/downloads/ai-automation-starter-checklist.pdf from tools/checklist.md.
 Run: python3 tools/build_checklist.py   (needs: pip install reportlab)"""
-import os, sys
+import os, re, sys
 from xml.sax.saxutils import escape
 from reportlab.lib import colors
 from reportlab.lib.pagesizes import A4
@@ -29,6 +29,24 @@ class Box(Flowable):
             c.setStrokeColor(BLUE); c.setLineWidth(1); c.roundRect(0, 0.5, 9.5, 9.5, 1.5)
         else:
             c.setFillColor(BLUE); c.circle(4.5, 5.5, 1.8, stroke=0, fill=1)
+
+class Button(Flowable):
+    """A clickable button: a markdown line that is only [label](url)."""
+    def __init__(self, label, url):
+        self.label, self.url = label, url
+        self.url_text = url.replace('https://', '')
+        self.width, self.height = 170 * mm, 20 * mm
+    def draw(self):
+        c = self.canv
+        w = c.stringWidth(self.label, 'Helvetica-Bold', 11.5) + 16 * mm
+        c.setFillColor(BLUE); c.roundRect(0, 8 * mm, w, 11 * mm, 5, stroke=0, fill=1)
+        c.setFillColor(colors.white); c.setFont('Helvetica-Bold', 11.5)
+        c.drawString(6 * mm, 12 * mm, self.label)
+        c.linkURL(self.url, (0, 8 * mm, w, 19 * mm), relative=1)
+        c.setFillColor(BLUE); c.setFont('Helvetica', 9.5); c.drawString(0, 1.5 * mm, self.url_text)
+        tw = c.stringWidth(self.url_text, 'Helvetica', 9.5)
+        c.setStrokeColor(BLUE); c.setLineWidth(.5); c.line(0, 1 * mm, tw, 1 * mm)
+        c.linkURL(self.url, (0, 0, tw, 5 * mm), relative=1)
 
 def row(text, check):
     t = Table([[Box(check), Paragraph(escape(text), item)]], colWidths=[7 * mm, 163 * mm])
@@ -65,6 +83,8 @@ def parse(lines):
         elif ln.startswith('## '): flush(); section.append(Paragraph(escape(ln[3:]), h2))
         elif ln.startswith('- [ ] '): section.append(row(ln[6:], True))
         elif ln.startswith('- '): section.append(row(ln[2:], False))
+        elif re.fullmatch(r'\[(.+)\]\((https?://\S+)\)', ln.strip()):
+            m = re.fullmatch(r'\[(.+)\]\((https?://\S+)\)', ln.strip()); section.extend([Spacer(1, 6), Button(m.group(1), m.group(2))])
         elif ln.strip(): section.extend([Spacer(1, 3), Paragraph(escape(ln), body)])
     flush()
     return out

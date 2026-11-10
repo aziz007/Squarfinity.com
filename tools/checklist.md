@@ -113,4 +113,4 @@ Stop and rethink if any of these apply.
 
 If you would like a second opinion on your first workflow, SquarFinity offers a free 30-minute AI workflow assessment. We map one of your processes against this checklist and tell you where AI fits and where it does not.
 
-Book at squarfinity.com/consult
+[Book your free AI workflow assessment](https://squarfinity.com/consult)
