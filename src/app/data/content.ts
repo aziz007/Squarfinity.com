@@ -151,9 +151,9 @@ export const TEAM = [
 
 export const INDUSTRIES: [string, string, string][] = [
   ['🛒', 'E-commerce & Retail', 'Order, inventory and support workflows automated across your store and back office.'],
-  ['👗', 'Fashion & Textiles', 'Wholesale portals, order processing and supplier document handling.'],
   ['🏠', 'Real Estate', 'Lead capture, CRM integrations and automated follow-up for enquiries.'],
+  ['🏢', 'B2B Services', 'Lead qualification, CRM automation and internal knowledge search.'],
+  ['👗', 'Fashion & Textiles', 'Wholesale portals, order processing and supplier document handling.'],
   ['🏥', 'Healthcare', 'Booking apps, patient portals and secure document workflows.'],
-  ['🚀', 'Startups', 'MVPs, SaaS products and AI features on a lean budget.'],
-  ['🏢', 'B2B Services', 'Lead qualification, CRM automation and internal knowledge search.']
+  ['🚀', 'Startups', 'MVPs, SaaS products and AI features on a lean budget.']
 ];

@@ -11,7 +11,7 @@ type PageKey = 'about' | 'industries' | 'insights' | 'privacy' | 'terms' | 'engi
 const SEO: Record<PageKey, [string, string]> = {
   engineering: ['How we engineer AI', 'How we design, test, deploy and monitor AI workflows, agents and cloud systems.'],
   about: ['About us', 'Our story, values and team. A small team with high standards.'],
-  industries: ['Industries we serve', 'E-commerce, fashion, real estate, healthcare, startups and B2B services.'],
+  industries: ['Industries we serve', 'AI automation and software for e-commerce and retail, real estate and B2B services, plus other sectors.'],
   insights: ['Insights', 'Practical guides on AI automation, agents and software engineering.'],
   privacy: ['Privacy Policy', 'How SquarFinity collects and uses personal data.'],
   terms: ['Terms of Service', 'Terms for using the SquarFinity website and services.']
@@ -57,8 +57,8 @@ const SEO: Record<PageKey, [string, string]> = {
       @case ('industries') {
         <section class="page-hero"><div class="wrap">
           <span class="eyebrow">Industries</span>
-          <h1>Experience across the industries that matter to you</h1>
-          <p class="lead" style="margin-top:18px">We understand the workflows, compliance needs and buyer journeys in each sector.</p>
+          <h1>Industries we focus on</h1>
+          <p class="lead" style="margin-top:18px">Our main focus is e-commerce and retail, real estate, and B2B services. We also take on projects in the other sectors below.</p>
         </div></section>
         <section style="padding-top:20px"><div class="wrap grid g3">
           @for (i of industries; track i[1]) {
@@ -83,7 +83,7 @@ const SEO: Record<PageKey, [string, string]> = {
               <span class="tag">{{ p.tag }}</span>
               <h3>{{ p.title }}</h3>
               <p class="muted">{{ p.summary }}</p>
-              <a routerLink="/guide" class="link">Get the free guide →</a>
+              <a routerLink="/guide" class="link">Get the free checklist →</a>
             </article>
           }
         </div></section>

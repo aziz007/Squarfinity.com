@@ -12,3 +12,4 @@
 /thanks/contact
 /thanks/ad-landing
 /engineering
+/demo

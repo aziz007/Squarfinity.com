@@ -16,7 +16,7 @@ import { setSeo } from '../services/seo';
       <p class="lead big" sfReveal>A team of 10–15 specialists who automate repetitive work, connect your systems and deploy AI with the testing, approvals and monitoring a business can rely on. Working with clients across the US, UK, Europe and Asia.</p>
       <div class="btns" sfReveal>
         <a routerLink="/consult" class="btn btn-primary">Book an AI Workflow Assessment →</a>
-        <a routerLink="/services" class="btn btn-ghost">Explore Our Solutions</a>
+        <a routerLink="/demo" class="btn btn-ghost">See a Workflow Demo</a>
       </div>
 
       @if (stats.length) {

@@ -25,6 +25,7 @@ export const routes: Routes = [
       { path: 'privacy', loadComponent: () => import('./pages/content.component').then(m => m.ContentPageComponent), data: { page: 'privacy' } },
       { path: 'terms', loadComponent: () => import('./pages/content.component').then(m => m.ContentPageComponent), data: { page: 'terms' } },
       { path: 'engineering', loadComponent: () => import('./pages/content.component').then(m => m.ContentPageComponent), data: { page: 'engineering' } },
+      { path: 'demo', loadComponent: () => import('./pages/demo.component').then(m => m.DemoComponent) },
       { path: 'contact', ...lead('contact') },
       { path: 'consult', ...lead('consultation') },
       { path: 'audit', ...lead('audit') },

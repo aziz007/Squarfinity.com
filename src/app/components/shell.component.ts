@@ -53,6 +53,7 @@ import { CONFIG } from '../data/content';
             <h4>Get in touch</h4>
             <a routerLink="/consult">AI Workflow Assessment</a>
             <a routerLink="/engineering">How We Engineer AI</a>
+            <a routerLink="/demo">Workflow Demo</a>
             <a routerLink="/contact">Contact</a>
             <a [href]="'mailto:' + config.companyEmail">{{ config.companyEmail }}</a>
           </div>
@@ -66,7 +67,7 @@ import { CONFIG } from '../data/content';
 
     <div class="float-bar">
       <a routerLink="/consult" class="btn btn-primary btn-sm">Book an Assessment</a>
-      <a routerLink="/audit" class="btn btn-ghost btn-sm">Free Audit</a>
+      <a routerLink="/demo" class="btn btn-ghost btn-sm">See a Demo</a>
     </div>
 
     <a class="wa" [href]="waLink" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">💬</a>
@@ -76,9 +77,9 @@ import { CONFIG } from '../data/content';
         <div class="form-card" style="max-width:520px;width:100%;position:relative" (click)="$event.stopPropagation()">
           <button class="x" (click)="showExit.set(false)" aria-label="Close">×</button>
           <span class="eyebrow">Before you go</span>
-          <h2 style="font-size:1.8rem">Get a free audit of your website</h2>
-          <p class="muted" style="margin:10px 0 20px">We'll review your speed, SEO and conversion points and email you a report within 48 hours.</p>
-          <a routerLink="/audit" class="btn btn-primary" style="width:100%;justify-content:center" (click)="showExit.set(false)">Get My Free Audit</a>
+          <h2 style="font-size:1.8rem">Get a free automation review</h2>
+          <p class="muted" style="margin:10px 0 20px">Describe one repetitive process and we'll email a short review of what could be automated within 48 hours.</p>
+          <a routerLink="/audit" class="btn btn-primary" style="width:100%;justify-content:center" (click)="showExit.set(false)">Get My Free Review</a>
         </div>
       </div>
     }

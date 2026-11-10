@@ -46,15 +46,16 @@ export const LEAD_CONFIG: Record<LeadType, LeadConfig> = {
   },
   audit: {
     type: 'audit',
-    eyebrow: 'Free website audit',
-    title: 'Is your website costing you customers?',
-    intro: 'Slow pages, weak messaging, broken SEO and confusing forms quietly lose sales. Get a free report showing what to fix first.',
-    bullets: ['Speed and mobile performance', 'SEO basics and technical issues', 'Conversion points and drop-offs'],
-    submitLabel: 'Send Me My Free Audit →',
+    eyebrow: 'Free automation review',
+    title: 'Which of your processes is worth automating first?',
+    intro: 'Describe one repetitive process. We will send a short written review of where automation and AI could help, and where they would not.',
+    bullets: ['Which steps can be automated', 'Where a person should stay in control', 'A rough effort and timeline estimate'],
+    submitLabel: 'Send Me My Free Review →',
     steps: [[
-      { name: 'url', label: 'Your website URL', type: 'url', required: true },
       { name: 'email', label: 'Work email', type: 'email', required: true },
-      { name: 'goal', label: 'Main goal', options: ['More leads', 'More sales', 'More traffic', 'Better design'] }
+      { name: 'company', label: 'Company' },
+      { name: 'process', label: 'Describe the process (who does what, how often, in which tools)', type: 'textarea', required: true },
+      { name: 'goal', label: 'Main goal', options: ['Save staff time', 'Respond to customers faster', 'Reduce errors', 'Better reporting'] }
     ]]
   },
   quote: {
@@ -78,10 +79,10 @@ export const LEAD_CONFIG: Record<LeadType, LeadConfig> = {
   guide: {
     type: 'guide',
     eyebrow: 'Free download',
-    title: 'The 2026 Guide to Growing Your Business Online',
-    intro: 'A practical playbook covering the website, the offer, the channels and the follow-up that turn visitors into customers.',
-    bullets: ['A 90-day growth checklist', 'Conversion fixes you can make this week', 'Budget guide for ads, SEO and content'],
-    submitLabel: 'Download the Guide →',
+    title: 'The AI Automation Starter Checklist',
+    intro: 'A practical checklist for choosing, scoping and safely launching your first AI workflow.',
+    bullets: ['How to pick a first workflow', 'Questions to ask about data and approvals', 'What to measure before and after launch'],
+    submitLabel: 'Send Me the Checklist →',
     steps: [[
       { name: 'name', label: 'First name', required: true },
       { name: 'email', label: 'Work email', type: 'email', required: true }

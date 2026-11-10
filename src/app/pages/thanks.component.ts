@@ -8,9 +8,9 @@ import { setSeo } from '../services/seo';
 
 const MESSAGES: Record<string, { title: string; text: string }> = {
   consultation: { title: "You're one step away", text: 'Pick a time on our calendar. We will confirm by email.' },
-  audit: { title: 'Audit request received', text: "We'll email your free website audit within 48 hours." },
+  audit: { title: 'Review request received', text: "We'll email your automation review within 48 hours." },
   quote: { title: 'Thanks! Your quote is on its way', text: "We'll review your brief and send a detailed proposal within one business day." },
-  guide: { title: 'Your guide is ready', text: 'Check your inbox for the download link.' },
+  guide: { title: 'Request received', text: "We'll email the checklist to you within one business day." },
   contact: { title: 'Message sent', text: 'We reply within one business day.' },
   'ad-landing': { title: "You're booked in", text: 'We will contact you within one business day to confirm your strategy call.' }
 };
