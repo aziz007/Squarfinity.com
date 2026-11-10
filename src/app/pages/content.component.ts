@@ -12,7 +12,7 @@ const SEO: Record<PageKey, [string, string]> = {
   engineering: ['How we engineer AI', 'How we design, test, deploy and monitor AI workflows, agents and cloud systems.'],
   about: ['About us', 'Our story, values and team. A small team with high standards.'],
   industries: ['Industries we serve', 'E-commerce, fashion, real estate, healthcare, startups and B2B services.'],
-  insights: ['Insights', 'Practical guides on software, marketing and growth.'],
+  insights: ['Insights', 'Practical guides on AI automation, agents and software engineering.'],
   privacy: ['Privacy Policy', 'How SquarFinity collects and uses personal data.'],
   terms: ['Terms of Service', 'Terms for using the SquarFinity website and services.']
 };
@@ -28,7 +28,7 @@ const SEO: Record<PageKey, [string, string]> = {
           <div>
             <span class="eyebrow">About us</span>
             <h1>A small team with big standards</h1>
-            <p class="lead" style="margin-top:18px">SquarFinity started with a simple idea: software and marketing should work together. We build the product, then help you grow it.</p>
+            <p class="lead" style="margin-top:18px">SquarFinity started with a simple idea: AI is only useful when it is engineered like dependable software. We automate the work, connect the systems and stay accountable for the result.</p>
           </div>
           <div class="avatar-lg">SF</div>
         </div></section>
@@ -75,7 +75,7 @@ const SEO: Record<PageKey, [string, string]> = {
         <section class="page-hero"><div class="wrap">
           <span class="eyebrow">Insights</span>
           <h1>Practical guides on software and growth</h1>
-          <p class="lead" style="margin-top:18px">Articles to help you make better decisions about your product and marketing.</p>
+          <p class="lead" style="margin-top:18px">Articles to help you make better decisions about AI, automation and software.</p>
         </div></section>
         <section style="padding-top:20px"><div class="wrap grid g2">
           @for (p of posts; track p.title) {

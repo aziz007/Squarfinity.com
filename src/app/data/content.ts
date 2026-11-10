@@ -125,35 +125,35 @@ export const STATS: [string, string][] = [];
 /* REGIONS: markets you serve */
 export interface Region { name: string; icon: string; note: string; }
 export const REGIONS: Region[] = [
-  { name: 'United States', icon: '🇺🇸', note: 'Product builds and growth campaigns for US startups and scale-ups.' },
-  { name: 'United Kingdom', icon: '🇬🇧', note: 'Software and marketing for UK SMEs, e-commerce brands and agencies.' },
-  { name: 'Europe', icon: '🇪🇺', note: 'Multilingual-ready apps and campaigns for European markets.' },
+  { name: 'United States', icon: '🇺🇸', note: 'AI workflow and product builds for US startups and scale-ups.' },
+  { name: 'United Kingdom', icon: '🇬🇧', note: 'Automation and custom software for UK SMEs and service businesses.' },
+  { name: 'Europe', icon: '🇪🇺', note: 'Multilingual-ready systems built with European data rules in mind.' },
   { name: 'Asia', icon: '🌏', note: 'Remote-first delivery across time zones for teams in Asia.' }
 ];
 
 export const POSTS: Post[] = [
-  { title: 'The 2026 Guide to Growing Your Business Online', tag: 'Strategy', summary: 'A practical playbook on SEO, paid ads and conversion.' },
-  { title: "Why Your Website Traffic Isn't Turning Into Leads", tag: 'Marketing', summary: 'The five most common conversion problems and quick fixes.' },
+  { title: 'Where to Start With AI Automation: Picking Your First Workflow', tag: 'Strategy', summary: 'How to choose a process that is worth automating and easy to measure.' },
+  { title: 'Chatbot or AI Agent? What Each One Can Do', tag: 'Agentic AI', summary: 'The difference between answering questions and completing tasks, in plain English.' },
   { title: 'MVP vs. Full Build: How to Choose Your First Release', tag: 'Software', summary: 'How to scope a product so you launch fast without cutting corners.' },
-  { title: 'Shopify or WooCommerce? A Plain-English Comparison', tag: 'E-commerce', summary: 'Cost, control, speed and scale, compared for real businesses.' }
+  { title: 'How to Test an AI System Before You Trust It', tag: 'Engineering', summary: 'Evaluation sets, approval steps and monitoring, explained for business owners.' }
 ];
 
 export const TEAM = [
   { name: 'Team Member', role: 'CEO & Founder', initials: 'CE' },
   { name: 'Team Member', role: 'Lead Developer', initials: 'LD' },
   { name: 'Team Member', role: 'Head of Design', initials: 'HD' },
-  { name: 'Team Member', role: 'Growth Lead', initials: 'GL' },
-  { name: 'Team Member', role: 'Paid Ads Specialist', initials: 'PA' },
-  { name: 'Team Member', role: 'SEO Specialist', initials: 'SE' },
+  { name: 'Team Member', role: 'AI Solutions Lead', initials: 'AI' },
+  { name: 'Team Member', role: 'Automation Engineer', initials: 'AE' },
+  { name: 'Team Member', role: 'DevOps Engineer', initials: 'DO' },
   { name: 'Team Member', role: 'Mobile Engineer', initials: 'ME' },
-  { name: 'Team Member', role: 'Content & Video', initials: 'CV' }
+  { name: 'Team Member', role: 'QA & AI Evaluation', initials: 'QA' }
 ];
 
 export const INDUSTRIES: [string, string, string][] = [
-  ['🛒', 'E-commerce & Retail', 'Stores that load fast and convert, with smart product pages and integrations.'],
-  ['👗', 'Fashion & Textiles', 'Brand-led storefronts, wholesale portals and visual campaigns.'],
-  ['🏠', 'Real Estate', 'Listing sites, lead capture, CRM integrations and local SEO.'],
-  ['🏥', 'Healthcare', 'Booking apps, patient portals and secure communication tools.'],
-  ['🚀', 'Startups', 'MVPs, SaaS products and launch marketing on a lean budget.'],
-  ['🏢', 'B2B Services', 'Lead qualification bots, outbound campaigns and trust-building content.']
+  ['🛒', 'E-commerce & Retail', 'Order, inventory and support workflows automated across your store and back office.'],
+  ['👗', 'Fashion & Textiles', 'Wholesale portals, order processing and supplier document handling.'],
+  ['🏠', 'Real Estate', 'Lead capture, CRM integrations and automated follow-up for enquiries.'],
+  ['🏥', 'Healthcare', 'Booking apps, patient portals and secure document workflows.'],
+  ['🚀', 'Startups', 'MVPs, SaaS products and AI features on a lean budget.'],
+  ['🏢', 'B2B Services', 'Lead qualification, CRM automation and internal knowledge search.']
 ];

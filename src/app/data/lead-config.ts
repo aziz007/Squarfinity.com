@@ -64,7 +64,7 @@ export const LEAD_CONFIG: Record<LeadType, LeadConfig> = {
     intro: 'Answer a few quick questions and we will send a tailored proposal.',
     submitLabel: 'Get My Quote →',
     steps: [
-      [{ name: 'need', label: 'What do you need?', required: true, options: ['Website or web app', 'Mobile app', 'SaaS product', 'E-commerce store', 'Digital marketing', 'AI automation'] }],
+      [{ name: 'need', label: 'What do you need?', required: true, options: ['AI workflow automation', 'AI agent or assistant', 'CRM and revenue operations', 'Document or knowledge search', 'Custom web or mobile software', 'Cloud and DevOps'] }],
       [{ name: 'budget', label: "What's your budget?", required: true, options: ['Under $5k', '$5k–$20k', '$20k–$50k', '$50k+'] }],
       [{ name: 'timeline', label: 'When do you want to start?', required: true, options: ['ASAP', 'Within 1 month', '1–3 months', 'Just exploring'] }],
       [
@@ -98,7 +98,7 @@ export const LEAD_CONFIG: Record<LeadType, LeadConfig> = {
       { name: 'email', label: 'Email', type: 'email', required: true },
       { name: 'company', label: 'Company' },
       { name: 'phone', label: 'Phone / WhatsApp', type: 'tel' },
-      { name: 'service', label: 'How can we help?', options: ['Software development', 'Digital marketing', 'E-commerce', 'AI automation', 'Not sure yet'] },
+      { name: 'service', label: 'How can we help?', options: ['AI workflow automation', 'AI agent or assistant', 'CRM and revenue operations', 'Custom software', 'Cloud and DevOps', 'Not sure yet'] },
       { name: 'message', label: 'Message', type: 'textarea' }
     ]]
   },

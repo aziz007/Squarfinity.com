@@ -6,7 +6,7 @@ import { RevealDirective } from '../directives/reveal.directive';
 import { PROJECTS } from '../data/content';
 import { setSeo } from '../services/seo';
 
-const FILTERS = ['All', 'Web', 'Mobile', 'SaaS', 'E-commerce', 'Marketing', 'AI'];
+const FILTERS = ['All', 'AI Automation', 'Agentic AI', 'CRM', 'Software', 'Cloud'];
 
 @Component({
   selector: 'sf-portfolio-list',
