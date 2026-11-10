@@ -46,7 +46,7 @@ import { setSeo } from '../services/seo';
         <div class="card center">
           <h3>Want similar results?</h3>
           <p class="muted" style="margin:10px 0 22px">Tell us about your project and we'll outline a plan.</p>
-          <a routerLink="/consult" class="btn btn-primary">Book a Free Consultation →</a>
+          <a routerLink="/consult" class="btn btn-primary">Book an AI Workflow Assessment →</a>
         </div>
       </div></section>
     } @else {

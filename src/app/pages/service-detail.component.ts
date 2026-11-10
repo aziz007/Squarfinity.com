@@ -18,7 +18,7 @@ import { setSeo } from '../services/seo';
         <h1>{{ s.short }}</h1>
         <p class="lead" style="margin-top:18px"><strong class="white">The problem:</strong> {{ s.problem }}</p>
         <div class="btns">
-          <a routerLink="/consult" class="btn btn-primary">Book a Free Consultation →</a>
+          <a routerLink="/consult" class="btn btn-primary">Book an AI Workflow Assessment →</a>
           <a routerLink="/portfolio" class="btn btn-ghost">See related work</a>
         </div>
       </div></section>
@@ -61,7 +61,7 @@ import { setSeo } from '../services/seo';
         <h2>Ready to start with {{ s.name }}?</h2>
         <p class="lead" style="margin:0 auto 26px">Get a clear scope, timeline and quote, free of charge.</p>
         <div class="btns" style="justify-content:center;margin-top:0">
-          <a routerLink="/consult" class="btn btn-primary">Book a Free Consultation →</a>
+          <a routerLink="/consult" class="btn btn-primary">Book an AI Workflow Assessment →</a>
           <a routerLink="/quote" class="btn btn-ghost">Get a Project Quote</a>
         </div>
       </div></div></section>

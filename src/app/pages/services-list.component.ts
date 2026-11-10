@@ -32,7 +32,7 @@ import { setSeo } from '../services/seo';
       <h2>Not sure where to start?</h2>
       <p class="lead">Tell us your goal and we'll recommend the right mix in one call.</p>
       <div class="btns" style="justify-content:center">
-        <a routerLink="/consult" class="btn btn-primary">Book a Free Consultation →</a>
+        <a routerLink="/consult" class="btn btn-primary">Book an AI Workflow Assessment →</a>
       </div>
     </div></section>
   `

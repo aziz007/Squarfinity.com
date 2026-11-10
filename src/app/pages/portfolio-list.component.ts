@@ -42,7 +42,7 @@ const FILTERS = ['All', 'Web', 'Mobile', 'SaaS', 'E-commerce', 'Marketing', 'AI'
     <section class="alt"><div class="wrap center">
       <h2 sfReveal>Have a project in mind?</h2>
       <div class="btns" style="justify-content:center">
-        <a routerLink="/consult" class="btn btn-primary">Book a Free Consultation →</a>
+        <a routerLink="/consult" class="btn btn-primary">Book an AI Workflow Assessment →</a>
       </div>
     </div></section>
   `
