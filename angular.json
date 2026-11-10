@@ -36,7 +36,8 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "css",
             "assets": [
-              { "glob": "favicon.svg", "input": "src", "output": "/" }
+              { "glob": "favicon.svg", "input": "src", "output": "/" },
+              { "glob": "*.pdf", "input": "src/downloads", "output": "/downloads" }
             ],
             "styles": ["src/styles.css"],
             "scripts": []

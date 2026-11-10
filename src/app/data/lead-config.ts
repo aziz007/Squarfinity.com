@@ -82,7 +82,7 @@ export const LEAD_CONFIG: Record<LeadType, LeadConfig> = {
     title: 'The AI Automation Starter Checklist',
     intro: 'A practical checklist for choosing, scoping and safely launching your first AI workflow.',
     bullets: ['How to pick a first workflow', 'Questions to ask about data and approvals', 'What to measure before and after launch'],
-    submitLabel: 'Send Me the Checklist →',
+    submitLabel: 'Get the Checklist →',
     steps: [[
       { name: 'name', label: 'First name', required: true },
       { name: 'email', label: 'Work email', type: 'email', required: true }
