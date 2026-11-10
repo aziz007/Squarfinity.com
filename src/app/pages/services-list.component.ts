@@ -10,8 +10,8 @@ import { setSeo } from '../services/seo';
   template: `
     <section class="page-hero"><div class="wrap">
       <span class="eyebrow">Services</span>
-      <h1>Everything you need to build and grow online</h1>
-      <p class="lead" style="margin-top:18px">Software and marketing under one roof, so your product and growth plan work together.</p>
+      <h1>AI-powered solutions and engineering</h1>
+      <p class="lead" style="margin-top:18px">Seven ways we help you automate work, connect your systems and ship reliable software.</p>
     </div></section>
 
     <section style="padding-top:20px"><div class="wrap grid g2">
@@ -43,6 +43,6 @@ export class ServicesListComponent implements OnInit {
   readonly services = SERVICES;
 
   ngOnInit() {
-    setSeo(this.title, this.meta, 'Services', 'Custom software, mobile apps, SaaS, e-commerce, digital marketing and AI automation.');
+    setSeo(this.title, this.meta, 'Services', 'AI workflow automation, agentic AI, CRM and revenue operations, document intelligence, custom software, cloud and DevOps, and AI governance.');
   }
 }

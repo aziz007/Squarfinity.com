@@ -12,13 +12,14 @@ import { CONFIG } from '../data/content';
         <a routerLink="/" class="logo"><span class="logo-mark">SF</span>Squar<span>Finity</span></a>
         <nav [class.open]="menuOpen()">
           <ul>
-            <li><a routerLink="/services" routerLinkActive="active" (click)="menuOpen.set(false)">Services</a></li>
-            <li><a routerLink="/portfolio" routerLinkActive="active" (click)="menuOpen.set(false)">Portfolio</a></li>
+            <li><a routerLink="/services" routerLinkActive="active" (click)="menuOpen.set(false)">Solutions</a></li>
+            <li><a routerLink="/engineering" routerLinkActive="active" (click)="menuOpen.set(false)">Engineering</a></li>
             <li><a routerLink="/industries" routerLinkActive="active" (click)="menuOpen.set(false)">Industries</a></li>
-            <li><a routerLink="/about" routerLinkActive="active" (click)="menuOpen.set(false)">About</a></li>
+            <li><a routerLink="/portfolio" routerLinkActive="active" (click)="menuOpen.set(false)">Case Studies</a></li>
             <li><a routerLink="/insights" routerLinkActive="active" (click)="menuOpen.set(false)">Insights</a></li>
+            <li><a routerLink="/about" routerLinkActive="active" (click)="menuOpen.set(false)">About</a></li>
             <li><a routerLink="/contact" routerLinkActive="active" (click)="menuOpen.set(false)">Contact</a></li>
-            <li class="nav-cta"><a routerLink="/consult" class="btn btn-primary btn-sm">Book a Free Call</a></li>
+            <li class="nav-cta"><a routerLink="/consult" class="btn btn-primary btn-sm">AI Workflow Assessment</a></li>
           </ul>
         </nav>
         <button class="menu-btn" (click)="toggleMenu()" aria-label="Toggle menu">☰</button>
@@ -32,14 +33,14 @@ import { CONFIG } from '../data/content';
         <div class="fgrid">
           <div>
             <a routerLink="/" class="logo"><span class="logo-mark">SF</span>Squar<span>Finity</span></a>
-            <p class="muted" style="max-width:320px;margin-top:14px">We build software and grow brands with a team of 10–15 specialists.</p>
+            <p class="muted" style="max-width:320px;margin-top:14px">AI workflow automation, agentic AI, CRM intelligence and cloud-native delivery from a team of 10–15 specialists.</p>
           </div>
           <div>
             <h4>Services</h4>
-            <a routerLink="/services/software">Software Development</a>
-            <a routerLink="/services/marketing">Digital Marketing</a>
-            <a routerLink="/services/ecommerce">E-commerce</a>
-            <a routerLink="/services/ai">AI Automation</a>
+            <a routerLink="/services/workflow-automation">AI Workflow Automation</a>
+            <a routerLink="/services/agentic-ai">Agentic AI</a>
+            <a routerLink="/services/crm-revops">CRM & Revenue Ops</a>
+            <a routerLink="/services/devops-cloud">Cloud & DevOps</a>
           </div>
           <div>
             <h4>Company</h4>
@@ -50,8 +51,8 @@ import { CONFIG } from '../data/content';
           </div>
           <div>
             <h4>Get in touch</h4>
-            <a routerLink="/consult">Free Consultation</a>
-            <a routerLink="/audit">Free Audit</a>
+            <a routerLink="/consult">AI Workflow Assessment</a>
+            <a routerLink="/engineering">How We Engineer AI</a>
             <a routerLink="/contact">Contact</a>
             <a [href]="'mailto:' + config.companyEmail">{{ config.companyEmail }}</a>
           </div>
@@ -64,7 +65,7 @@ import { CONFIG } from '../data/content';
     </footer>
 
     <div class="float-bar">
-      <a routerLink="/consult" class="btn btn-primary btn-sm">Book a Call</a>
+      <a routerLink="/consult" class="btn btn-primary btn-sm">Book an Assessment</a>
       <a routerLink="/audit" class="btn btn-ghost btn-sm">Free Audit</a>
     </div>
 

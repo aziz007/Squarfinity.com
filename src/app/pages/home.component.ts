@@ -11,12 +11,12 @@ import { setSeo } from '../services/seo';
   imports: [RouterLink, ProjectCardComponent, RevealDirective],
   template: `
     <section class="hero hero-grid"><div class="wrap">
-      <span class="eyebrow" sfReveal>Software house · Digital marketing agency</span>
-      <h1 sfReveal>We Build Software<br>and <span>Grow Brands</span></h1>
-      <p class="lead big" sfReveal>A team of 10–15 specialists who design, build and market digital products for startups, SMBs and e-commerce brands across the US, UK, Europe and Asia.</p>
+      <span class="eyebrow" sfReveal>AI workflow automation · Agentic AI · Custom software</span>
+      <h1 sfReveal>We Build AI-Powered Workflows<br>and <span>Dependable Software</span></h1>
+      <p class="lead big" sfReveal>A team of 10–15 specialists who automate repetitive work, connect your systems and deploy AI with the testing, approvals and monitoring a business can rely on. Working with clients across the US, UK, Europe and Asia.</p>
       <div class="btns" sfReveal>
-        <a routerLink="/consult" class="btn btn-primary">Book a Free Consultation →</a>
-        <a routerLink="/portfolio" class="btn btn-ghost">View Our Work</a>
+        <a routerLink="/consult" class="btn btn-primary">Book an AI Workflow Assessment →</a>
+        <a routerLink="/services" class="btn btn-ghost">Explore Our Solutions</a>
       </div>
 
       @if (stats.length) {
@@ -37,7 +37,8 @@ import { setSeo } from '../services/seo';
     }
 
     <section class="alt"><div class="wrap">
-      <div class="center" sfReveal><span class="eyebrow">What we do</span><h2>Two teams. One goal: your growth.</h2></div>
+      <div class="center" sfReveal><span class="eyebrow">Solutions</span><h2>Seven ways we help you work smarter</h2>
+        <p class="lead">Start with one process or one system. Each solution is scoped, built and measured on its own terms.</p></div>
       <div class="grid g2" style="margin-top:48px">
         @for (s of services; track s.slug) {
           <a [routerLink]="['/services', s.slug]" class="card" sfReveal>
@@ -77,6 +78,27 @@ import { setSeo } from '../services/seo';
       </div>
     </div></section>
 
+    <section><div class="wrap split">
+      <div sfReveal><span class="eyebrow">Engineering</span><h2>How we engineer AI</h2>
+        <p class="lead">Every AI system follows the same discipline as our software: defined inputs, tested behaviour, controlled releases and monitoring after launch.</p>
+        <div class="btns" style="margin-top:24px"><a routerLink="/engineering" class="btn btn-ghost">See our engineering approach →</a></div></div>
+      <div class="grid" style="gap:14px">
+        <div class="card" sfReveal><h3>Evaluation before launch</h3><p class="muted">Agreed test cases and acceptance criteria for accuracy and failure handling.</p></div>
+        <div class="card" sfReveal><h3>Human approval for sensitive actions</h3><p class="muted">AI proposes, and a person approves anything that changes money, records or customers.</p></div>
+        <div class="card" sfReveal><h3>Monitoring after launch</h3><p class="muted">Logs, error alerts and quality tracking so problems are seen early.</p></div>
+      </div>
+    </div></section>
+
+    <section class="alt"><div class="wrap split">
+      <div sfReveal><span class="eyebrow">Your data</span><h2>How we handle your data</h2>
+        <p class="lead">Trust comes first when AI touches business information. We agree these points with you before any build starts.</p></div>
+      <div class="grid" style="gap:14px">
+        <div class="card" sfReveal><h3>Your data stays yours</h3><p class="muted">You own your data, code and accounts. We document each system so your team can run it without us.</p></div>
+        <div class="card" sfReveal><h3>Access limited to the task</h3><p class="muted">Each workflow only sees the data it needs, with access controls and an audit trail of actions.</p></div>
+        <div class="card" sfReveal><h3>Clear rules on AI training</h3><p class="muted">We confirm in writing how your data is used by any AI provider before a project starts.</p></div>
+      </div>
+    </div></section>
+
     @if (featured.length) {
       <section><div class="wrap">
         <div style="display:flex;justify-content:space-between;align-items:end;flex-wrap:wrap;gap:20px">
@@ -106,11 +128,11 @@ import { setSeo } from '../services/seo';
     <section><div class="wrap">
       <div class="cta-band" sfReveal>
         <span class="eyebrow">Ready when you are</span>
-        <h2>Let's build something people use.</h2>
-        <p class="lead" style="margin:0 auto 28px">Book a 30-minute call. We'll review your goals and tell you honestly what we'd do.</p>
+        <h2>Find the first process worth automating.</h2>
+        <p class="lead" style="margin:0 auto 28px">Book a 30-minute AI workflow assessment. We'll map your most repetitive work and tell you honestly where AI fits and where it doesn't.</p>
         <div class="btns" style="justify-content:center;margin-top:0">
-          <a routerLink="/consult" class="btn btn-primary">Book a Free Consultation →</a>
-          <a routerLink="/audit" class="btn btn-ghost">Get a Free Website Audit</a>
+          <a routerLink="/consult" class="btn btn-primary">Book an AI Workflow Assessment →</a>
+          <a routerLink="/contact" class="btn btn-ghost">Talk to Our Team</a>
         </div>
       </div>
     </div></section>
@@ -134,7 +156,7 @@ export class HomeComponent implements OnInit {
   ];
 
   ngOnInit() {
-    setSeo(this.title, this.meta, 'Software House & Digital Marketing Agency',
-      'SquarFinity builds custom software, mobile apps and e-commerce stores for clients in the US, UK, Europe and Asia, and grows them with SEO, paid ads and content.');
+    setSeo(this.title, this.meta, 'AI Workflow Automation & Software Engineering',
+      'SquarFinity builds AI-powered workflows, agentic AI assistants, CRM automation and custom software for clients in the US, UK, Europe and Asia.');
   }
 }

@@ -22,20 +22,27 @@ export interface LeadConfig {
 export const LEAD_CONFIG: Record<LeadType, LeadConfig> = {
   consultation: {
     type: 'consultation',
-    eyebrow: 'Free consultation',
-    title: 'Book a 30-minute strategy call',
-    intro: "We'll review your goals, suggest the fastest path, and give you a rough budget and timeline. No obligation.",
-    bullets: ['Honest advice, even if we are not the right fit', 'A clear next-step plan you can use with any agency', 'Answers within one business day'],
+    eyebrow: 'AI workflow assessment',
+    title: 'Book a 30-minute AI workflow assessment',
+    intro: 'We will map your most repetitive processes, show where AI and automation fit, and outline what it would take. No obligation.',
+    bullets: ['A review of the processes most worth automating', 'An honest view of what AI should and should not do for you', 'A rough scope, budget range and timeline'],
     submitLabel: 'Continue to Booking →',
-    steps: [[
-      { name: 'name', label: 'Full name', required: true },
-      { name: 'email', label: 'Work email', type: 'email', required: true },
-      { name: 'company', label: 'Company', required: true },
-      { name: 'website', label: 'Website', type: 'url' },
-      { name: 'service', label: 'Service needed', required: true, options: ['Software development', 'Mobile app', 'SaaS product', 'E-commerce', 'Digital marketing', 'AI automation', 'Not sure'] },
-      { name: 'budget', label: 'Budget range', options: ['Under $5k', '$5k–$20k', '$20k–$50k', '$50k+', 'Not sure'] },
-      { name: 'timeline', label: 'Timeline', options: ['ASAP (under 1 month)', '1–3 months', '3–6 months', 'Just exploring'] }
-    ]]
+    steps: [
+      [
+        { name: 'name', label: 'Full name', required: true },
+        { name: 'email', label: 'Work email', type: 'email', required: true },
+        { name: 'company', label: 'Company', required: true },
+        { name: 'role', label: 'Your role' },
+        { name: 'website', label: 'Website', type: 'url' }
+      ],
+      [
+        { name: 'process', label: 'Which process takes the most manual work?', type: 'textarea', required: true },
+        { name: 'tools', label: 'Tools you use today (CRM, helpdesk, accounting, etc.)', type: 'textarea' },
+        { name: 'team_size', label: 'Team size', options: ['1–10', '11–50', '51–200', '200+'] },
+        { name: 'service', label: 'What do you want to achieve?', options: ['Automate workflows', 'Build an AI agent or assistant', 'Connect CRM and revenue tools', 'Document or knowledge search', 'Custom software', 'Cloud and DevOps', 'Not sure yet'] },
+        { name: 'timeline', label: 'Timeline', options: ['ASAP (under 1 month)', '1–3 months', '3–6 months', 'Just exploring'] }
+      ]
+    ]
   },
   audit: {
     type: 'audit',
