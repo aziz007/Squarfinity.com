@@ -88,4 +88,36 @@ if (NOTIFY_EMAIL !== '') {
     @mail(NOTIFY_EMAIL, 'New SquarFinity lead: ' . $type, $body, 'From: no-reply@' . $host);
 }
 
+// Optional CRM forwarding. Settings live in <data folder>/config.php so secrets stay out of the
+// website code and survive deploys. See deploy/crm-config.example.php.
+$configFile = $dataDir . '/config.php';
+$config = is_file($configFile) ? (include $configFile) : [];
+$crmUrl = is_array($config) ? ($config['crm_webhook_url'] ?? '') : '';
+if (is_string($crmUrl) && preg_match('#^https://#i', $crmUrl) && function_exists('curl_init')) {
+    $payload = json_encode(['source' => 'squarfinity.com', 'lead' => $lead], JSON_UNESCAPED_UNICODE);
+    $headers = ['Content-Type: application/json'];
+    $secret = $config['crm_webhook_secret'] ?? '';
+    if (is_string($secret) && $secret !== '') {
+        // The CRM can verify this: HMAC-SHA256 of the raw request body, using the shared secret.
+        $headers[] = 'X-Squarfinity-Signature: sha256=' . hash_hmac('sha256', $payload, $secret);
+    }
+    $ch = curl_init($crmUrl);
+    curl_setopt_array($ch, [
+        CURLOPT_POST => true,
+        CURLOPT_POSTFIELDS => $payload,
+        CURLOPT_HTTPHEADER => $headers,
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_CONNECTTIMEOUT => 3,
+        CURLOPT_TIMEOUT => 5,
+    ]);
+    $result = curl_exec($ch);
+    $status = (int) curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    if ($result === false || $status < 200 || $status >= 300) {
+        // The lead is already saved and emailed; record the failure so it can be re-sent by hand.
+        $note = gmdate('c') . ' lead ' . $lead['id'] . ' status ' . $status . ' ' . curl_error($ch) . "\n";
+        @file_put_contents($dataDir . '/crm-failures.log', $note, FILE_APPEND | LOCK_EX);
+    }
+    curl_close($ch);
+}
+
 respond(201, ['ok' => true]);
