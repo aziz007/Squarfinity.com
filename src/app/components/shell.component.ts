@@ -1,6 +1,8 @@
 import { isPlatformBrowser } from '@angular/common';
-import { Component, HostListener, PLATFORM_ID, inject, signal } from '@angular/core';
-import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { Component, HostListener, PLATFORM_ID, computed, inject, signal } from '@angular/core';
+import { toSignal } from '@angular/core/rxjs-interop';
+import { NavigationEnd, Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { filter, map } from 'rxjs';
 import { CONFIG } from '../data/content';
 
 @Component({
@@ -66,10 +68,12 @@ import { CONFIG } from '../data/content';
       </div>
     </footer>
 
-    <div class="float-bar">
-      <a routerLink="/consult" class="btn btn-primary btn-sm">Book an Assessment</a>
-      <a routerLink="/demo" class="btn btn-ghost btn-sm">See a Demo</a>
-    </div>
+    @if (showFloatBar()) {
+      <div class="float-bar">
+        <a routerLink="/consult" class="btn btn-primary btn-sm">Book an Assessment</a>
+        <a routerLink="/demo" class="btn btn-ghost btn-sm">See a Demo</a>
+      </div>
+    }
 
     <a class="wa" [href]="waLink" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">💬</a>
 
@@ -94,6 +98,14 @@ export class ShellComponent {
   readonly year = new Date().getFullYear();
   readonly menuOpen = signal(false);
   readonly showExit = signal(false);
+
+  /** The floating bar is hidden on form pages, where it would cover the form's own buttons. */
+  private router = inject(Router);
+  private url = toSignal(
+    this.router.events.pipe(filter(e => e instanceof NavigationEnd), map(() => this.router.url)),
+    { initialValue: this.router.url }
+  );
+  readonly showFloatBar = computed(() => !/^\/(consult|contact|audit|quote|guide|thanks)(\/|\?|#|$)/.test(this.url()));
   private exitShown = false;
 
   toggleMenu() {
