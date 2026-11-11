@@ -210,7 +210,7 @@ export const TESTIMONIALS: Testimonial[] = [];
 /* CLIENTS: client logos shown on the home page. Files live in src/clients. Hidden while empty. */
 export interface Client { name: string; src: string; bg: string; }
 export const CLIENTS: Client[] = [
-  { name: 'Client logo', src: '/clients/client-s.png', bg: '#ffffff' },
+  { name: 'Sunbright Lighting', src: '/clients/sunbright-lighting.png', bg: '#ffffff' },
   { name: 'Design Era', src: '/clients/design-era.png', bg: '#efefef' },
   { name: 'ILM', src: '/clients/ilm.png', bg: '#ffffff' },
   { name: 'Al-Qadir-o-Nafay', src: '/clients/al-qadir-o-nafay.png', bg: '#0c0c0c' },
