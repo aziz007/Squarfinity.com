@@ -9,7 +9,7 @@ declare(strict_types=1);
 const ALLOWED_TYPES = ['consultation', 'audit', 'quote', 'guide', 'contact', 'ad-landing'];
 const MAX_FIELD_LENGTH = 2000;
 const MAX_BODY_BYTES = 50000;
-const NOTIFY_EMAIL = ''; // e.g. 'hello@squarfinity.com' to get an email for each lead; leave empty to skip
+const NOTIFY_EMAIL = 'aziz@squarfinity.com'; // e.g. 'hello@squarfinity.com' to get an email for each lead; leave empty to skip
 
 header('Content-Type: application/json; charset=utf-8');
 header('X-Content-Type-Options: nosniff');
@@ -60,10 +60,18 @@ foreach ($data as $key => $value) {
 }
 $lead['receivedAt'] = gmdate('c');
 
-// Store outside the public web root (cPanel: /home/<user>/squarfinity-data)
-$dataDir = dirname($_SERVER['DOCUMENT_ROOT'] ?? __DIR__) . '/squarfinity-data';
+// Store outside every public web root: /home/<user>/squarfinity-data.
+// An addon domain's document root sits inside public_html, so walk up past public_html.
+$root = rtrim($_SERVER['DOCUMENT_ROOT'] ?? __DIR__, '/');
+$pos = strpos($root . '/', '/public_html/');
+$base = $pos !== false ? substr($root, 0, $pos) : dirname($root);
+$dataDir = $base . '/squarfinity-data';
 if (!is_dir($dataDir) && !mkdir($dataDir, 0700, true) && !is_dir($dataDir)) {
     respond(500, ['ok' => false, 'error' => 'Could not save lead']);
+}
+// Second line of defence in case the folder is ever web-reachable.
+if (!is_file($dataDir . '/.htaccess')) {
+    @file_put_contents($dataDir . '/.htaccess', "Require all denied\n");
 }
 
 $line = json_encode($lead, JSON_UNESCAPED_UNICODE) . "\n";

@@ -56,6 +56,7 @@ import { CONFIG } from '../data/content';
             <a routerLink="/demo">Workflow Demo</a>
             <a routerLink="/contact">Contact</a>
             <a [href]="'mailto:' + config.companyEmail">{{ config.companyEmail }}</a>
+            <a [href]="waLink" target="_blank" rel="noopener">WhatsApp: {{ config.phone }}</a>
           </div>
         </div>
         <div class="copy">

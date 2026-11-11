@@ -26,8 +26,15 @@ import { setSeo } from '../services/seo';
             @for (b of cfg.bullets; track b) { <li>{{ b }}</li> }
           </ul>
         }
-        @if (cfg.type === 'consultation') {
-          <div class="trust"><span>★★★★★ 4.9 average rating</span><span>85+ clients</span></div>
+        @if (cfg.type === 'contact') {
+          <div class="card" style="margin-top:8px">
+            <h3>Prefer to message us directly?</h3>
+            <p class="muted" style="margin:8px 0 16px">Chat with us on WhatsApp or send an email.</p>
+            <div class="btns" style="margin-top:0">
+              <a [href]="waLink" target="_blank" rel="noopener" class="btn btn-primary btn-sm">WhatsApp {{ phone }}</a>
+              <a [href]="'mailto:' + email" class="btn btn-ghost btn-sm">{{ email }}</a>
+            </div>
+          </div>
         }
       </div>
 
@@ -87,6 +94,9 @@ export class LeadFormComponent {
   private title = inject(Title);
   private meta = inject(Meta);
 
+  readonly phone = CONFIG.phone;
+  readonly email = CONFIG.companyEmail;
+  readonly waLink = `https://wa.me/${CONFIG.whatsapp}`;
   readonly cfg: LeadConfig;
   readonly form: FormGroup;
   readonly step = signal(0);

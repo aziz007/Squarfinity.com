@@ -32,9 +32,9 @@ export interface Post {
 
 /* Edit these for your business */
 export const CONFIG = {
-  companyEmail: 'hello@example.com',
-  phone: '+1 000 000 0000',
-  whatsapp: '10000000000', // digits only, with country code
+  companyEmail: 'aziz@squarfinity.com',
+  phone: '+1 406 316 5766', // shown as the WhatsApp number
+  whatsapp: '14063165766', // digits only, with country code
   location: '[City, Country]',
   calendarUrl: 'https://calendly.com/your-link',
   social: { linkedin: '#', instagram: '#', facebook: '#' }
