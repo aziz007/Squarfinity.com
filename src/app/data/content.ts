@@ -141,6 +141,35 @@ export const PROJECTS: Project[] = [
       { src: '/portfolio-img/behavior-body-mapping.jpg', caption: 'Incident form with body mapping (sample data)' },
       { src: '/portfolio-img/behavior-permissions.jpg', caption: 'Staff roles and permissions (sample data)' }
     ]
+  },
+  {
+    id: 'compensation-planning-erp',
+    title: 'Compensation Planning ERP for Merit, Bonus and Equity Cycles',
+    client: 'Enterprise HR team (client name withheld)',
+    cats: ['SaaS', 'Software'],
+    icon: '$',
+    problem: 'HR teams were running annual merit, bonus and equity cycles in spreadsheets, which made salary calculations error-prone and budgets, guidelines and approvals hard to control.',
+    solution: 'We developed an enterprise compensation planning system that replaces those spreadsheets. Managers plan in editable worksheets with live budget tracking and guideline validation, increases above guideline are escalated through multi-level approvals, and HR gets pay-equity analytics, an audit trail and automated compensation letters. End-to-end tests cover the salary calculation logic.',
+    tools: ['React', 'TypeScript', 'Node.js', 'PostgreSQL', 'REST API', 'Cypress'],
+    results: [],
+    quote: '',
+    who: '',
+    features: [
+      'Editable planning worksheets for merit, bonus and equity',
+      'Live budget tracking against each pool',
+      'Guideline validation that flags out-of-range increases',
+      'Multi-level approval workflows with escalation',
+      'Pay-equity analytics',
+      'HRIS sync',
+      'Audit trail of every change',
+      'Automated compensation letters',
+      'Cypress end-to-end tests covering salary calculations'
+    ],
+    images: [
+      { src: '/portfolio-img/comp-dashboard.jpg', caption: 'Cycle dashboard with budget pools and planning progress (sample data)' },
+      { src: '/portfolio-img/comp-worksheet.jpg', caption: 'Planning worksheet with guideline checks (sample data)' },
+      { src: '/portfolio-img/comp-approvals.jpg', caption: 'Approvals queue, pay-equity snapshot and audit trail (sample data)' }
+    ]
   }
 ];
 
