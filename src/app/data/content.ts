@@ -116,6 +116,36 @@ export const SERVICES: Service[] = [
  */
 export const PROJECTS: Project[] = [
   {
+    id: 'fire-safety-compliance-saas',
+    title: 'Fire Safety Compliance SaaS for Inspections and Audits',
+    client: 'Fire safety companies (client name withheld)',
+    cats: ['SaaS', 'Software'],
+    icon: '▲',
+    problem: 'Fire safety companies were managing inspections, compliance audits and certificates with manual paperwork, and compliance reports took days to produce.',
+    solution: 'We built a multi-tenant SaaS platform that digitizes the whole process. Inspectors work through scheduled inspection checklists, deficiencies are logged with photos, compliance reports are generated as PDFs automatically, and email reminders go out before certificates expire. A Playwright end-to-end test suite and a CI/CD pipeline protect every release.',
+    tools: ['Angular', 'TypeScript', 'Node.js', 'Express', 'MongoDB', 'Firebase', 'Playwright', 'CI/CD'],
+    results: [
+      ['Days to minutes', 'Compliance report turnaround'],
+      ['Paper to digital', 'Inspection and audit paperwork']
+    ],
+    quote: '',
+    who: '',
+    features: [
+      'Multi-tenant platform for multiple fire safety companies',
+      'Role-based dashboards',
+      'Scheduled inspection workflows and checklists',
+      'Automated PDF compliance reports',
+      'Document uploads',
+      'Email reminders for expiring certificates',
+      'Playwright end-to-end test suite and CI/CD pipeline'
+    ],
+    images: [
+      { src: '/portfolio-img/fire-dashboard.jpg', caption: 'Portfolio compliance dashboard (sample data)' },
+      { src: '/portfolio-img/fire-checklist.jpg', caption: 'On-site inspection checklist with a logged deficiency (sample data)' },
+      { src: '/portfolio-img/fire-reports.jpg', caption: 'Auto-generated reports and certificates (sample data)' }
+    ]
+  },
+  {
     id: 'behavior-management-system',
     title: 'Behavior Management System with Body Mapping',
     client: 'Special education schools (client name withheld)',

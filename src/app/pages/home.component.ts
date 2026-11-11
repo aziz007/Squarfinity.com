@@ -105,7 +105,7 @@ import { setSeo } from '../services/seo';
           <div sfReveal><span class="eyebrow">Featured work</span><h2>Projects we're proud of</h2></div>
           <a routerLink="/portfolio" class="btn btn-ghost">All case studies →</a>
         </div>
-        <div class="grid g2" style="margin-top:40px">
+        <div class="grid g3" style="margin-top:40px">
           @for (p of featured; track p.id) { <sf-project-card [project]="p" sfReveal /> }
         </div>
       </div></section>
@@ -147,7 +147,7 @@ export class HomeComponent implements OnInit {
   readonly stats = STATS;
   readonly clients = CLIENTS;
   readonly testimonials = TESTIMONIALS;
-  readonly featured = PROJECTS.slice(0, 2);
+  readonly featured = PROJECTS.slice(0, 3);
   readonly process: [string, string][] = [
     ['Discover', 'We learn your goals, users and budget.'],
     ['Plan', 'We agree on scope, timeline and KPIs.'],
