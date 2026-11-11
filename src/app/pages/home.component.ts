@@ -128,6 +128,22 @@ import { setSeo } from '../services/seo';
       </div></section>
     }
 
+    <section class="alt"><div class="wrap split">
+      <div sfReveal><span class="eyebrow">Free download</span><h2>The AI Automation Starter Checklist</h2>
+        <p class="lead">A 4-page PDF with seven steps to choose, scope and safely launch your first AI workflow. Written for business owners, not engineers.</p>
+        <div class="btns" style="margin-top:24px"><a routerLink="/guide" class="btn btn-primary">Get the Free Checklist →</a></div></div>
+      <div class="card" sfReveal>
+        <h3>What's inside</h3>
+        <ul class="check" style="margin-top:14px">
+          <li>How to pick the right first workflow</li>
+          <li>The data questions to ask any supplier</li>
+          <li>Where a person should approve</li>
+          <li>How to test before launch</li>
+          <li>What to measure before and after</li>
+        </ul>
+      </div>
+    </div></section>
+
     <section><div class="wrap">
       <div class="cta-band" sfReveal>
         <span class="eyebrow">Ready when you are</span>
