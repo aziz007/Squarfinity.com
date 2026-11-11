@@ -30,9 +30,12 @@ import { setSeo } from '../services/seo';
 
     @if (clients.length) {
       <section style="padding:40px 0"><div class="wrap">
-        <p class="logos" sfReveal>
-          @for (c of clients; track c) { <span>{{ c }}</span> }
-        </p>
+        <p class="eyebrow center" style="display:block;text-align:center;margin-bottom:22px" sfReveal>Clients we have worked with</p>
+        <div class="client-logos" sfReveal>
+          @for (c of clients; track c.src) {
+            <div class="client-logo" [style.background]="c.bg"><img [src]="c.src" [alt]="c.name" loading="lazy"></div>
+          }
+        </div>
       </div></section>
     }
 

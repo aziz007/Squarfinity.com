@@ -38,7 +38,8 @@
             "assets": [
               { "glob": "favicon.svg", "input": "src", "output": "/" },
               { "glob": "*.pdf", "input": "src/downloads", "output": "/downloads" },
-              { "glob": "*", "input": "src/portfolio", "output": "/portfolio-img" }
+              { "glob": "*", "input": "src/portfolio", "output": "/portfolio-img" },
+              { "glob": "*", "input": "src/clients", "output": "/clients" }
             ],
             "styles": ["src/styles.css"],
             "scripts": []

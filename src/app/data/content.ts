@@ -207,8 +207,23 @@ export const PROJECTS: Project[] = [
 export interface Testimonial { quote: string; who: string; }
 export const TESTIMONIALS: Testimonial[] = [];
 
-/* CLIENTS: client or partner names shown as a "trusted by" strip. Hidden while empty. */
-export const CLIENTS: string[] = [];
+/* CLIENTS: client logos shown on the home page. Files live in src/clients. Hidden while empty. */
+export interface Client { name: string; src: string; bg: string; }
+export const CLIENTS: Client[] = [
+  { name: 'Client logo', src: '/clients/client-s.png', bg: '#ffffff' },
+  { name: 'Design Era', src: '/clients/design-era.png', bg: '#efefef' },
+  { name: 'ILM', src: '/clients/ilm.png', bg: '#ffffff' },
+  { name: 'Al-Qadir-o-Nafay', src: '/clients/al-qadir-o-nafay.png', bg: '#0c0c0c' },
+  { name: 'Easy Deal Consultant & Builders', src: '/clients/easy-deal.png', bg: '#ffffff' },
+  { name: 'KJ Man', src: '/clients/kj-man.png', bg: '#ffffff' },
+  { name: 'ABBA Lighting USA', src: '/clients/abba-lighting.png', bg: '#ffffff' },
+  { name: 'L.A Voltage', src: '/clients/la-voltage.png', bg: '#ffffff' },
+  { name: 'Kings Outdoor Lighting', src: '/clients/kings-outdoor-lighting.png', bg: '#050601' },
+  { name: 'Essentia', src: '/clients/essentia.png', bg: '#000000' },
+  { name: 'Planet Builders & Interiors', src: '/clients/planet-builders.png', bg: '#ffffff' },
+  { name: 'Syed Developers', src: '/clients/syed-developers.png', bg: '#40545c' },
+  { name: 'Rapid Marketing (Pvt.) Ltd.', src: '/clients/rapid-marketing.png', bg: '#000000' },
+];
 
 /* STATS: headline numbers, e.g. ['40+', 'Projects delivered']. Hidden while empty. */
 export const STATS: [string, string][] = [];
