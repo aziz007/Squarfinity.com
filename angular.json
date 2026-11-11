@@ -37,7 +37,8 @@
             "inlineStyleLanguage": "css",
             "assets": [
               { "glob": "favicon.svg", "input": "src", "output": "/" },
-              { "glob": "*.pdf", "input": "src/downloads", "output": "/downloads" }
+              { "glob": "*.pdf", "input": "src/downloads", "output": "/downloads" },
+              { "glob": "*", "input": "src/portfolio", "output": "/portfolio-img" }
             ],
             "styles": ["src/styles.css"],
             "scripts": []

@@ -22,6 +22,10 @@ export interface Project {
   results: [string, string][];
   quote: string;
   who: string;
+  /** Optional: key features shown as a list on the case study page. */
+  features?: string[];
+  /** Optional: screenshots in src/portfolio, served from /portfolio-img/. The first is the card thumbnail. */
+  images?: { src: string; caption: string }[];
 }
 
 export interface Post {
@@ -110,7 +114,35 @@ export const SERVICES: Service[] = [
  * CASE STUDIES: add your own projects here. Each entry appears on the
  * portfolio page and on the home page (first two). Leave empty to hide them.
  */
-export const PROJECTS: Project[] = [];
+export const PROJECTS: Project[] = [
+  {
+    id: 'behavior-management-system',
+    title: 'Behavior Management System with Body Mapping',
+    client: 'Special education schools (client name withheld)',
+    cats: ['SaaS', 'Software'],
+    icon: '▤',
+    problem: 'Special education schools have to document student behavioral incidents and safety events accurately, including where an injury or restraint occurred, and report on them for compliance.',
+    solution: 'We built a full-stack web platform where staff log each incident in a structured form and mark injury or restraint locations on an interactive body diagram. Dashboards show behavior trends per student, compliance reports are generated automatically, and teachers, counselors and admins each see only what their role allows.',
+    tools: ['MongoDB', 'Express', 'React', 'Node.js', 'REST API'],
+    results: [],
+    quote: '',
+    who: '',
+    features: [
+      'Interactive body mapping for injury and restraint locations',
+      'Structured incident logging with type, severity, staff and notes',
+      'Intervention tracking per student',
+      'Role-based access for teachers, counselors and admins',
+      'Dashboards with behavior trends per student',
+      'Automated compliance reports',
+      'Secure authentication'
+    ],
+    images: [
+      { src: '/portfolio-img/behavior-dashboard.jpg', caption: 'Dashboard with incident trends (sample data)' },
+      { src: '/portfolio-img/behavior-body-mapping.jpg', caption: 'Incident form with body mapping (sample data)' },
+      { src: '/portfolio-img/behavior-permissions.jpg', caption: 'Staff roles and permissions (sample data)' }
+    ]
+  }
+];
 
 /* TESTIMONIALS: real client quotes. The home section is hidden while this is empty. */
 export interface Testimonial { quote: string; who: string; }

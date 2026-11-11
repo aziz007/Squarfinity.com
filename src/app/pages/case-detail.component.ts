@@ -19,8 +19,15 @@ import { setSeo } from '../services/seo';
       </div></section>
 
       <section style="padding-top:20px"><div class="wrap">
-        <div class="thumb big">{{ p.icon }}</div>
-        <p class="notice">Replace this placeholder with real screenshots.</p>
+        @if (p.images?.length) {
+          <div class="grid" style="gap:28px">
+            @for (img of p.images; track img.src) {
+              <figure class="shot"><img [src]="img.src" [alt]="img.caption" loading="lazy"><figcaption class="muted small">{{ img.caption }}</figcaption></figure>
+            }
+          </div>
+        } @else {
+          <div class="thumb big">{{ p.icon }}</div>
+        }
       </div></section>
 
       <section><div class="wrap grid g2">
@@ -29,22 +36,34 @@ import { setSeo } from '../services/seo';
       </div></section>
 
       <section class="alt"><div class="wrap">
-        <h2>Results</h2>
-        <div class="grid g3" style="margin-top:32px">
-          @for (r of p.results; track r[1]) {
-            <div class="card"><div class="big-num">{{ r[0] }}</div><p class="muted">{{ r[1] }}</p></div>
-          }
-        </div>
+        @if (p.results.length) {
+          <h2>Results</h2>
+          <div class="grid g3" style="margin:32px 0">
+            @for (r of p.results; track r[1]) {
+              <div class="card"><div class="big-num">{{ r[0] }}</div><p class="muted">{{ r[1] }}</p></div>
+            }
+          </div>
+        }
+        @if (p.features?.length) {
+          <h2>What we built</h2>
+          <ul class="check" style="margin-top:24px">
+            @for (f of p.features; track f) { <li>{{ f }}</li> }
+          </ul>
+        }
         <div class="card" style="margin-top:32px"><h3>Tools & tech</h3><p class="muted">{{ p.tools.join(' · ') }}</p></div>
       </div></section>
 
       <section><div class="wrap split">
-        <div class="card">
-          <p class="quote">“{{ p.quote }}”</p>
-          <cite class="cite">{{ p.who }}</cite>
-        </div>
+        @if (p.quote) {
+          <div class="card">
+            <p class="quote">“{{ p.quote }}”</p>
+            <cite class="cite">{{ p.who }}</cite>
+          </div>
+        } @else {
+          <div><h2>Have a similar system in mind?</h2><p class="lead">We design, build and deploy custom platforms like this one, from the database to the interface.</p></div>
+        }
         <div class="card center">
-          <h3>Want similar results?</h3>
+          <h3>Start with a conversation</h3>
           <p class="muted" style="margin:10px 0 22px">Tell us about your project and we'll outline a plan.</p>
           <a routerLink="/consult" class="btn btn-primary">Book an AI Workflow Assessment →</a>
         </div>

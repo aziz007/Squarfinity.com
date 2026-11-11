@@ -167,3 +167,9 @@ footer a:hover { color: var(--accent); }
 }
 
 .logos { display:flex; flex-wrap:wrap; gap:14px 40px; justify-content:center; color:var(--muted); font-weight:700; opacity:.8; }
+
+/* Portfolio screenshots */
+.thumb-img { display: block; width: 100%; height: 200px; object-fit: cover; object-position: top left; background: #fff; }
+.shot { margin: 0; }
+.shot img { display: block; width: 100%; height: auto; border-radius: var(--radius); border: 1px solid var(--line); background: #fff; }
+.shot figcaption { margin-top: 10px; }

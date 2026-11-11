@@ -6,7 +6,7 @@ import { RevealDirective } from '../directives/reveal.directive';
 import { PROJECTS } from '../data/content';
 import { setSeo } from '../services/seo';
 
-const FILTERS = ['All', 'AI Automation', 'Agentic AI', 'CRM', 'Software', 'Cloud'];
+const FILTERS = ['All', 'SaaS', 'AI Automation', 'Agentic AI', 'CRM', 'Software', 'Cloud'];
 
 @Component({
   selector: 'sf-portfolio-list',
@@ -14,8 +14,8 @@ const FILTERS = ['All', 'AI Automation', 'Agentic AI', 'CRM', 'Software', 'Cloud
   template: `
     <section class="page-hero hero-grid"><div class="wrap">
       <span class="eyebrow" sfReveal>Portfolio</span>
-      <h1 sfReveal>Case studies with real results</h1>
-      <p class="lead" style="margin-top:18px" sfReveal>Problem, solution and measurable outcomes for every project.</p>
+      <h1 sfReveal>Case studies from real projects</h1>
+      <p class="lead" style="margin-top:18px" sfReveal>The problem, what we built and the technology behind each project.</p>
       @if (projects.length) {
         <div class="filters">
           @for (f of filters; track f) {
