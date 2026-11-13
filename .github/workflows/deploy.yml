@@ -27,7 +27,7 @@ jobs:
           rm -rf site && mkdir -p site/api
           cp -r dist/squarfinity/browser/. site/
           rm -f site/index.csr.html
-          cp deploy/public_html/api/leads.php site/api/
+          cp deploy/public_html/api/*.php site/api/
           cp deploy/public_html/.htaccess site/
           ls -la site
 

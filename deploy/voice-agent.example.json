@@ -1,0 +1,6 @@
+{
+  "enabled": true,
+  "publicKey": "public_key_REPLACE_ME",
+  "agentId": "agent_REPLACE_ME",
+  "maxMinutes": 10
+}

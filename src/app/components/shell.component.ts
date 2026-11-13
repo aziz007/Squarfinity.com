@@ -4,10 +4,11 @@ import { toSignal } from '@angular/core/rxjs-interop';
 import { NavigationEnd, Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { filter, map } from 'rxjs';
 import { CONFIG } from '../data/content';
+import { VoiceAgentComponent } from './voice-agent.component';
 
 @Component({
   selector: 'sf-shell',
-  imports: [RouterOutlet, RouterLink, RouterLinkActive],
+  imports: [RouterOutlet, RouterLink, RouterLinkActive, VoiceAgentComponent],
   template: `
     <header>
       <div class="wrap nav">
@@ -77,6 +78,7 @@ import { CONFIG } from '../data/content';
     }
 
     <a class="wa" [href]="waLink" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">💬</a>
+    <sf-voice-agent />
 
     @if (showExit()) {
       <div class="modal show" (click)="showExit.set(false)">
